@@ -10,6 +10,8 @@
 
         <Label Text="Select your name from the list"></Label>
 
+        <Label x:Name="Emp_Lataus"></Label>
+
         <ListView x:Name="employeeList" StyleClass="lista" SelectionMode="Single">
             <ListView.ItemTemplate>
                 <DataTemplate>

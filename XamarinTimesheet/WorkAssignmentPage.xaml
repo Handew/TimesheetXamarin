@@ -4,9 +4,26 @@
              x:Class="XamarinTimesheet.WorkAssignmentPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Työtehtävät" />
+
+            <Label x:Name="Työ_lataus"></Label>
+
+            <ListView x:Name="workList" StyleClass="lista" SelectionMode="Single">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Title}" Detail="{Binding DeadLine}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        
+
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="Aloitus_Nappi" Text="Aloita työ" Clicked="Aloitus_Nappi_Clicked"></Button>
+                <Button x:Name="Lopetus_Nappi" Text="Lopeta työ" Clicked="Lopetus_Nappi_Clicked"></Button>
+
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

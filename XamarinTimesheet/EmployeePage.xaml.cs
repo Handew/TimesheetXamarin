@@ -18,14 +18,14 @@ namespace XamarinTimesheet
         {
             InitializeComponent();
 
-            LoadEmployees();
+            Emp_Lataus.Text = "Ladataan työntekijöitä...";
 
-            async void LoadEmployees()
+            LoadDataFromRestAPI();
+
+            async void LoadDataFromRestAPI()
             {
                 try
                 {
-                    employeeList.ItemsSource = new List<string> { "Ladataan", "IoT dataa", "palvelimelta..." };
-
                     HttpClient client = new HttpClient();
 
                     client.BaseAddress = new Uri("https://timesheetbackend.azurewebsites.net");
@@ -34,6 +34,8 @@ namespace XamarinTimesheet
                     IEnumerable<Employee> employees = JsonConvert.DeserializeObject<Employee[]>(json);
                     ObservableCollection<Employee> dataa = new ObservableCollection<Employee>(employees);
                     employeeList.ItemsSource = dataa;
+                    //Tyhjennetään latausilmoitus label
+                    Emp_Lataus.Text = null;
 
                 }
                 catch (Exception e)
@@ -53,7 +55,8 @@ namespace XamarinTimesheet
             else
             {
                 //await DisplayAlert("Valinta puuttuu", emp.FirstName, "OK");
-                await Navigation.PushAsync(new WorkAssignmentPage()); // Navigoidaan uudelle sivulle
+                int id = emp.IdEmployee;
+                await Navigation.PushAsync(new WorkAssignmentPage(id)); // Navigoidaan uudelle sivulle
             }
         }
     }
