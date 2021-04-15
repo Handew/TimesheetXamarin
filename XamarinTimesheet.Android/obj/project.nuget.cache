@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "c/dKMi/IFyXlbzi6DrEDBimi5X8Vf5S/4VH/G9POs/pKiBkK2yq68g7X+zsc8JkkjOtC/80SQM/FG8OrRpoDaA==",
+  "dgSpecHash": "0M6drBtPi/UyEUoLNCPTtL4wgF39y9y34FpSapGax4XDnM5qSxNYrKF/nSM67rAoZTky45B1RWxU09TKZ+xcLg==",
   "success": true,
   "projectFilePath": "C:\\Users\\hannu\\source\\repos\\XamarinTimesheet\\XamarinTimesheet.Android\\XamarinTimesheet.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\hannu\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\hannu\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.activity\\1.1.0.5\\xamarin.androidx.activity.1.1.0.5.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.annotation\\1.1.0.8\\xamarin.androidx.annotation.1.1.0.8.nupkg.sha512",
