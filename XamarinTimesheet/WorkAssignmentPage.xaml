@@ -15,8 +15,10 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            
-        
+
+            <Label x:Name="lat_label"></Label>
+            <Label x:Name="lon_label"></Label>
+
 
             <StackLayout Orientation="Horizontal">
                 <Button x:Name="Aloitus_Nappi" Text="Aloita työ" Clicked="Aloitus_Nappi_Clicked"></Button>
